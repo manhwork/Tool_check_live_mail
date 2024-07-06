@@ -33,6 +33,10 @@ for acc in accs:
     driver.find_element(By.ID,value='idSIButton9').click()
     time.sleep(5)
 
-    # driver.quit()
+    driver.quit()
+    if driver.current_url.find("https://login.live.com/"):
+        f2 = open("C:\\Users\\MTQV\\Desktop\\Python Program\\tool_check_live_mail\\mail_pass_check.txt","a")
+        f2.write(acc)
+        f2.close()
     
     
